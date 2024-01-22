@@ -2,6 +2,7 @@ package me.kazury.portableenka;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
+import me.kazury.portableenka.util.GlobalConfig;
 import me.kazury.portableenka.util.UpdateTask;
 import org.jetbrains.annotations.NotNull;
 
@@ -19,7 +20,7 @@ public class Main {
 
         System.out.println("Starting application on screen size: " + screenWidth + "x" + screenHeight);
 
-        if (screenWidth < 1920 || screenHeight < 1080) {
+        if (screenWidth < GlobalConfig.CARD_FRAME_SIZE.width || screenHeight < GlobalConfig.CARD_FRAME_SIZE.height) {
             System.out.println("Screen size is too small, exiting...");
             System.exit(0);
         }
