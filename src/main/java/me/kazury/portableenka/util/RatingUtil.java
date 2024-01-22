@@ -3,6 +3,7 @@ package me.kazury.portableenka.util;
 import me.kazury.enkanetworkapi.enka.EnkaNetworkAPI;
 import me.kazury.enkanetworkapi.genshin.data.GenshinAffix;
 import me.kazury.enkanetworkapi.genshin.data.GenshinArtifact;
+import me.kazury.enkanetworkapi.genshin.data.GenshinArtifactType;
 import me.kazury.enkanetworkapi.genshin.data.GenshinRollData;
 import org.jetbrains.annotations.NotNull;
 
@@ -16,6 +17,11 @@ public class RatingUtil {
             "FIGHT_PROP_ATTACK",
             "FIGHT_PROP_DEFENSE",
             "FIGHT_PROP_HP"
+    );
+
+    private static final List<GenshinArtifactType> ignoreRating = List.of(
+            GenshinArtifactType.FLOWER,
+            GenshinArtifactType.FEATHER
     );
 
     @NotNull
@@ -121,7 +127,7 @@ public class RatingUtil {
             final double value = entry.getValue();
 
             if (key.equals(convertedStat)) {
-                out += (2.5 * subStatCount) * value;
+                out += (2.5 * subStatCount) * (ignoreRating.contains(artifact.getType()) ? 1: value);
                 continue;
             }
 
