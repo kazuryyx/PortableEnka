@@ -13,7 +13,7 @@ import java.awt.*;
 import java.util.regex.Pattern;
 
 public class EnterUIDFrame extends JFrame {
-    private final Pattern pattern = Pattern.compile("[0-9]{9}");
+    private final Pattern pattern = Pattern.compile("[0-9]{10}");
 
     public JPanel mainPanel;
     public JTextArea textBox;
@@ -23,12 +23,6 @@ public class EnterUIDFrame extends JFrame {
     public JButton ratingExplanationButton;
 
     public void afterInit() {
-        System.out.println(mainPanel);
-        System.out.println(textBox);
-        System.out.println(enterLabel);
-        System.out.println(proceed);
-        System.out.println(ratingExplanationButton);
-
         final MenuManager menuManager = Main.getMenuManager();
 
         this.proceed.addMouseListener(new MouseClickAdapter((event) -> {
@@ -40,7 +34,7 @@ public class EnterUIDFrame extends JFrame {
             if (!this.pattern.matcher(text).matches()) {
                 final ErrorFrame errorFrame = menuManager.openErrorFrame(
                         "Invalid UID",
-                        "UID must be 9 digits long and number.",
+                        "UID must be 9 (or 10) digits long and number.",
                         this);
 
                 errorFrame.quitButton.addMouseListener(new MouseClickAdapter((ev) -> menuManager.openUIDFrame(errorFrame)));
