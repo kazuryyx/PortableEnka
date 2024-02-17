@@ -13,7 +13,7 @@ import java.awt.*;
 import java.util.regex.Pattern;
 
 public class EnterUIDFrame extends JFrame {
-    private final Pattern pattern = Pattern.compile("[0-9]{10}");
+    private final Pattern pattern = Pattern.compile("^(18|[1-35-9])\\d{8}$");
 
     public JPanel mainPanel;
     public JTextArea textBox;
