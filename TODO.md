@@ -1,7 +1,6 @@
 # Not Done
 - Make an individual frame which shows the current operation like "Loading Talents" after selecting a character
 - Add public details frame
-- Redirect "Rating Explanation" to README.md once uploaded
 - (maybe): Assign every character a factor for splash art, some are smaller than others
 # Done
 - Add support for missing artifact slots
@@ -22,3 +21,4 @@
 - Cleanup of "loadX" artifact methods
 - Update Checker
 - QoL: When hovering over a frame which contains a stat, highlight every other frame that also has this
+- Redirect "Rating Explanation" to README.md once uploaded

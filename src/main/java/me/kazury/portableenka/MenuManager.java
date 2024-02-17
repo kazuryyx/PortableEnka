@@ -87,6 +87,9 @@ public class MenuManager {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.afterInit();
         frame.setVisible(true);
+
+        frame.ratingExplanationButton.addMouseListener(new MouseClickAdapter((event) -> Main.redirectToReadMe()));
+
         this.dispose(disposable);
     }
 
@@ -239,10 +242,7 @@ public class MenuManager {
             MenuManager.this.openSelectionFrame(information.getUid(), frame, loadingFrame2);
         }));
 
-        frame.explanationButton.addMouseListener(new MouseClickAdapter((event) -> {
-            JOptionPane.showMessageDialog(frame, "This feature is currently not implemented.",
-                    "Not Implemented", JOptionPane.ERROR_MESSAGE);
-        }));
+        frame.explanationButton.addMouseListener(new MouseClickAdapter((event) -> Main.redirectToReadMe()));
 
         this.loadTopBar(api, frame, information, character);
         this.loadCharacterStats(character, frame);
