@@ -15,6 +15,10 @@ Head over to the Releases tag and download the newest JAR. Simply execute it and
 - Fetching between any server with no server selector.
 - View Public Details from UID
 
+### Showcase Images
+![img.png](img.png)
+![img_1.png](img_1.png)
+
 ## Rating Explanation
 ### Trigger Warning: Math
 
