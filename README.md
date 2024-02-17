@@ -108,3 +108,6 @@ Which is then parsed into the following Tiers to display on the card:
 | 48-59                             |    B    |
 | 60-75                             |    A    |
 | 76-100                            |    S    |
+
+### Credits
+The application was made by me (kazury). However the original concept & artifact rating algorithm was made by @Modos21.
