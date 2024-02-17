@@ -3,6 +3,7 @@ package me.kazury.portableenka;
 import com.formdev.flatlaf.FlatLightLaf;
 import com.formdev.flatlaf.themes.FlatMacDarkLaf;
 import me.kazury.portableenka.util.GlobalConfig;
+import me.kazury.portableenka.util.UpdateTask;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
@@ -41,12 +42,10 @@ public class Main {
         fetcher = new EnkaFetcher();
         enkaCache = new EnkaCache();
 
-        /**
         if (new UpdateTask().getLatestVersion().isUpdateAvailable()) {
             menuManager.openOutdatedFrame();
             return;
         }
-        */
 
         menuManager.openUIDFrame();
     }
