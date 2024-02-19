@@ -33,6 +33,9 @@ public enum StatAppendProp {
             case "Energy Recharge" -> ENERGY_RECHARGE;
             case "Healing Bonus" -> HEALING_BONUS;
             default -> {
+                if (text.isBlank()) {
+                    yield null;
+                }
                 System.out.println("Unknown stat: " + text);
                 yield null;
             }
