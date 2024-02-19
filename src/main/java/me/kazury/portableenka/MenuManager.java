@@ -302,7 +302,9 @@ public class MenuManager {
 
             final StatAppendProp prop = StatAppendProp.of(mainLabel.getText());
             if (prop == null) continue;
-            propComponents.get(prop).add(mainLabel);
+            final List<JComponent> jComponents = propComponents.get(prop);
+            if (jComponents == null) continue;
+            jComponents.add(mainLabel);
         }
 
         propComponents.entrySet().stream()
@@ -358,7 +360,6 @@ public class MenuManager {
         final List<GenshinUserWeapon.WeaponStat> stats = weapon.getStats();
 
         final GenshinUserWeapon.WeaponStat base = stats.get(0);
-        final GenshinUserWeapon.WeaponStat secondary = stats.get(1);
 
         frame.weaponIcon.setIcon(weaponIcon);
         frame.weaponName.setText(weapon.getName());
@@ -374,6 +375,14 @@ public class MenuManager {
 
         frame.baseAttackLabel.setText(base.getFormattedValue());
         frame.baseAttackLabel.setIcon(cache.getWeaponIcon(base.getStat()));
+
+        if (stats.size() == 1) {
+            frame.secondaryLabel.setText("");
+            frame.secondaryLabel.setIcon(null);
+            return;
+        }
+
+        final GenshinUserWeapon.WeaponStat secondary = stats.get(1);
 
         frame.secondaryLabel.setText(secondary.getFormattedValue());
         frame.secondaryLabel.setIcon(cache.getWeaponIcon(secondary.getStat()));
