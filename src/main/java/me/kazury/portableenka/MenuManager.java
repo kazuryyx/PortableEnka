@@ -378,7 +378,7 @@ public class MenuManager {
         frame.levelLabel.setText("Lv. " + weapon.getWeaponLevel());
         frame.levelLabel.setForeground(level == 90 ? GlobalConfig.GOLD : Color.WHITE);
 
-        frame.stars.setForeground(stars == 5 ? GlobalConfig.GOLD : GlobalConfig.FOUR_STAR_COLOR);
+        frame.stars.setForeground(stars == 5 ? GlobalConfig.GOLD : stars == 4 ? GlobalConfig.FOUR_STAR_COLOR : Color.GRAY);
         frame.stars.setText("⭐".repeat(weapon.getStar()));
 
         frame.baseAttackLabel.setText(base.getFormattedValue());
