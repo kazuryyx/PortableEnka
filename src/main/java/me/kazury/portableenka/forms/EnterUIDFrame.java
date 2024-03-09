@@ -30,6 +30,7 @@ public class EnterUIDFrame extends JFrame {
 
         this.proceed.addMouseListener(new MouseClickAdapter((event) -> {
             final String text = textBox.getText();
+            // TODO: Next version - Trim the text
 
             if (text.equals("Enter UID...")) return;
             if (text.isBlank()) return;
