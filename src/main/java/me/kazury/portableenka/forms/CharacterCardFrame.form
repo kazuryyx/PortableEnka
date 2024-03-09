@@ -1554,6 +1554,17 @@
               <text value="Return to Selection"/>
             </properties>
           </component>
+          <component id="75a6e" class="javax.swing.JButton" binding="nextCharacterButton">
+            <constraints/>
+            <properties>
+              <background color="-13947600"/>
+              <font name="Franklin Gothic Heavy" size="15"/>
+              <foreground color="-16718492"/>
+              <opaque value="false"/>
+              <preferredSize width="200" height="50"/>
+              <text value="Next Character"/>
+            </properties>
+          </component>
         </children>
       </grid>
     </children>

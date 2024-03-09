@@ -242,6 +242,14 @@ public class MenuManager {
             MenuManager.this.openSelectionFrame(information.getUid(), frame, loadingFrame2);
         }));
 
+        frame.nextCharacterButton.addMouseListener(new MouseClickAdapter((event) -> {
+            final int nextIndex = charIndex + 1;
+            if (nextIndex >= characters.size()) return;
+
+            final JFrame loadingFrame2 = MenuManager.this.openLoadingFrame(frame);
+            MenuManager.this.openCardFrame(nextIndex, frame, loadingFrame2);
+        }));
+
         frame.explanationButton.addMouseListener(new MouseClickAdapter((event) -> Main.redirectToReadMe()));
 
         this.loadTopBar(api, frame, information, character);

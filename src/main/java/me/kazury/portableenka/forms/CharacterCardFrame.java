@@ -150,6 +150,7 @@ public class CharacterCardFrame extends JFrame {
     public JLabel emText;
     public JLabel crText;
     public JLabel cdText;
+    public JButton nextCharacterButton;
 
     private void loadArtifactComponents() {
         this.flower = RoundedBorder.adjustPanel(
@@ -1538,6 +1539,15 @@ public class CharacterCardFrame extends JFrame {
         returnButton.setPreferredSize(new Dimension(200, 50));
         returnButton.setText("Return to Selection");
         panel8.add(returnButton);
+        nextCharacterButton = new JButton();
+        nextCharacterButton.setBackground(new Color(-13947600));
+        Font nextCharacterButtonFont = this.$$$getFont$$$("Franklin Gothic Heavy", -1, 15, nextCharacterButton.getFont());
+        if (nextCharacterButtonFont != null) nextCharacterButton.setFont(nextCharacterButtonFont);
+        nextCharacterButton.setForeground(new Color(-16718492));
+        nextCharacterButton.setOpaque(false);
+        nextCharacterButton.setPreferredSize(new Dimension(200, 50));
+        nextCharacterButton.setText("Next Character");
+        panel8.add(nextCharacterButton);
     }
 
     /**
