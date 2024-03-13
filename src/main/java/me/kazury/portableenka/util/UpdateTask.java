@@ -11,7 +11,7 @@ import java.net.URLConnection;
 import java.util.Map;
 
 public class UpdateTask {
-    public static final String CURRENT_VERSION = "V1.2";
+    public static final String CURRENT_VERSION = "V1.3";
 
     private static final String GITHUB_URL = "https://api.github.com/repos/kazuryyx/PortableEnka/releases/latest";
 
